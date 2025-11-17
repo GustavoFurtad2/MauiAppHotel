@@ -46,7 +46,12 @@ public partial class ContratacaoHospedagem : ContentPage
         }
     }
 
-    private void dtpck_checkin_DateSelected(object sender, DateChangedEventArgs e)
+	private async void BtnSobre_Clicked(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new Views.SobrePage());
+	}
+
+	private void dtpck_checkin_DateSelected(object sender, DateChangedEventArgs e)
     {
         DatePicker elemento = sender as DatePicker;
 
